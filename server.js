@@ -5,7 +5,8 @@ var app = express();
 
 //Port
 var port = process.env.port || 8080;
-
+// set the view engine to ejs
+app.set('view engine', 'ejs');
 
 app.use(express.static(__dirname));
 app.use(bodypareser.json());
@@ -15,8 +16,6 @@ app.post("/email",function(req,res){
     res.send(JSON.stringify(req.body));
 });
 
-
-
 app.listen(port,function(){
-console.log('Server Started at Port : '+port);
+console.log('Server Started at Port : '+port)
 });
