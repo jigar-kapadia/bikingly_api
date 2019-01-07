@@ -11,10 +11,11 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "sendgrid": "^5.2.3"
   },
   "engines": {
     "node": "8.9.4",
-    "npm" : "5.6.0"
+    "npm": "5.6.0"
   }
 }
