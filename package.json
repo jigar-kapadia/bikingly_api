@@ -2,7 +2,7 @@
   "name": "bikingly-api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -12,5 +12,8 @@
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.4"
+  },
+  "engines": {
+    "node": "8.9.4"
   }
 }
