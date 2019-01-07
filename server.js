@@ -4,7 +4,7 @@ var http = require('http');
 var app = express();
 
 //Port
-var port = process.env.port || 8080;
+var port = process.env.PORT || 8080;
 // set the view engine to ejs
 app.set('view engine', 'ejs');
 
