@@ -8,7 +8,7 @@ var app = express();
 var port = process.env.PORT || 8080;
 // set the view engine to ejs
 app.set('view engine', 'ejs');
-
+sgMail.setApiKey(process.env.sendgridkey);
 app.use(express.static(__dirname));
 app.use(bodypareser.json());
 app.use(bodypareser.urlencoded({ extended: true })); // support encoded bodies
@@ -25,7 +25,7 @@ app.post("/email",function(req,res){
 
      //sgMail.send(msg,true);
 
-       res.send(message);
+       res.send(msg);
 });
 
 app.listen(port,function(){
