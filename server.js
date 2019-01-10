@@ -12,6 +12,15 @@ sgMail.setApiKey(process.env.sendgridkey);
 app.use(express.static(__dirname));
 app.use(bodypareser.json());
 app.use(bodypareser.urlencoded({ extended: true })); // support encoded bodies
+
+//cors
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
+
 //Routes
 app.post("/email",function(req,res){
     //res.send(JSON.stringify(req.body));
