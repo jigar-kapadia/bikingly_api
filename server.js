@@ -23,6 +23,7 @@ app.use(function(req, res, next) {
 
 //Routes
 app.post("/email",function(req,res){
+  
     //res.send(JSON.stringify(req.body));
      const msg = {
         to: process.env.toEmail,
@@ -32,7 +33,8 @@ app.post("/email",function(req,res){
          html: '<strong>Test HTML</strong>',
        };
 
-     sgMail.send(msg,true);
+       res.send(msg);
+     //sgMail.send(msg,true);
 
        //res.send(req.body.from + ' --- ' +  req.body.subject + ' ---- ' + req.body.message);
 });
