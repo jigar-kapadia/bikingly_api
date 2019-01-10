@@ -45,10 +45,14 @@ app.post("/email",function(req,res){
        };
 
        //res.send(msg);
-      sgMail.send(msg);
+      sgMail.send(msg).then((sent)=>{
+          res.send(200,'Mail Sent!');
+      });
+
+
 
        //res.send(req.body.from + ' --- ' +  req.body.subject + ' ---- ' + req.body.message);
-});
+},);
 
 app.listen(port,function(){
 console.log('Server Started at Port : '+port)
